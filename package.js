@@ -2,10 +2,10 @@ var fs = Npm.require('fs');
 var path = Npm.require('path');
 
 Package.describe({
-  "summary": "A way to inject data to the client with initial HTML",
-  "version": "2.0.0",
+  "summary": "This fork removes the dependency from jQuery. Inject-data is a way to inject data to the client with initial HTML",
+  "version": "2.0.1",
   "git": "https://github.com/meteorhacks/inject-data",
-  "name": "meteorhacks:inject-data"
+  "name": "elledienne:inject-data"
 });
 
 Package.onUse(function(api) {
@@ -38,7 +38,7 @@ function configure (api) {
   api.versionsFrom('METEOR@0.9.3');
 
   api.use(['ejson', 'underscore'], ['server', 'client']);
-  api.use('jquery', 'client');
+  // api.use('jquery', 'client');
 
   api.addFiles([
     'lib/inject.html',
